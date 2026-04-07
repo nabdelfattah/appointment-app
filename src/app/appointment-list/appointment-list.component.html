@@ -1,0 +1,29 @@
+<div>
+  <input
+    [(ngModel)]="newAppointmentTitle"
+    type="text"
+    placeholder="Appointment description"
+  />
+  <input
+    [(ngModel)]="newAppointmentDate"
+    type="date"
+    placeholder="Appointment date"
+  />
+  <button (click)="addAppointment()">Add</button>
+</div>
+
+@if (appointments.length) {
+  <ul>
+    @for (appointment of appointments; track appointment.id) {
+      <li>
+        <p>
+          {{ appointment.id }} {{ appointment.title }}
+          {{ appointment.date | date: "fullDate" }}
+        </p>
+        <button (click)="deleteAppointment(appointment.id)">Delete</button>
+      </li>
+    }
+  </ul>
+} @else {
+  <p>No appointments yet.</p>
+}
