@@ -1,27 +1,78 @@
-# AppointmentApp
+# 📅 Appointment App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.17.
+A simple and responsive appointment management app built with **Angular 17** and **Tailwind CSS v4**.
 
-## Development server
+## ✨ Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- ➕ Add new appointments with description and date
+- 📋 Display all saved appointments
+- ❌ Delete appointments
+- 💾 Persist data using **localStorage** (data stays after refresh)
+- 📱 Fully responsive design
 
-## Code scaffolding
+---
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## 🛠️ Tech Stack
 
-## Build
+- **Angular 17**
+- **Tailwind CSS v4**
+- **TypeScript**
+- **LocalStorage API**
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+---
 
-## Running unit tests
+## 🚀 Getting Started
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. Clone the repository
 
-## Running end-to-end tests
+```bash
+git clone https://github.com/nabdelfattah/appointment-app.git
+cd appointment-app
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+2. Install dependencies
 
-## Further help
+```bash
+npm install
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+3. Run the app
+
+```bash
+ng serve
+```
+
+Then open your browser at: http://localhost:4200
+
+## 📂 Project Structure
+
+```
+src/
+ ├── app/
+ │    ├── appointment-list/
+ │    │    ├── appointment-list.component.ts
+ │    │    ├── appointment-list.component.html
+ │    │    └── appointment-list.component.css
+ │    └── ...
+ └── ...
+```
+
+## 🧠 How It Works
+
+- User inputs:
+  Appointment description
+  Appointment date
+- On submit:
+  Data is stored in an array
+  Saved to localStorage
+- On app load:
+  Data is retrieved from localStorage
+  Each appointment has a unique ID for tracking and deletion
+
+## 📸 Preview
+
+![App Screenshot](./screenshot.png)
+
+## 📄 License
+
+This project is open-source and available under the MIT License.
